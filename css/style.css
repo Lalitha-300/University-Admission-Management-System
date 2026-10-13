@@ -1,0 +1,782 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+}
+/* HEADER */
+header {
+    background: #172554;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+/* HERO */
+.hero {
+    height: 450px;
+    background:
+        linear-gradient(
+            rgba(23, 37, 84, 0.85),
+            rgba(23, 37, 84, 0.85)
+        );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #1d4ed8;
+}
+/* ABOUT */
+.about {
+    padding: 60px 8%;
+    text-align: center;
+}
+.about h2 {
+    margin-bottom: 35px;
+}
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+.card {
+    background: white;
+    padding: 30px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #ddd;
+}
+.card h3 {
+    margin-bottom: 15px;
+}
+/* ADMISSION PROCESS */
+.process {
+    padding: 60px 8%;
+    text-align: center;
+}
+.process h2 {
+    margin-bottom: 35px;
+}
+.steps {
+    display: flex;
+    justify-content: space-between;
+}
+.steps div {
+    width: 22%;
+}
+.steps span {
+    background: #2563eb;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+/* FOOTER */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 8px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+    .steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .steps div {
+        width: 100%;
+    }
+}
+/* =========================================
+   COURSES PAGE
+========================================= */
+/* Main course section */
+.course-section {
+    padding: 60px 8%;
+    text-align: center;
+    min-height: 700px;
+}
+/* Main heading */
+.course-section h1 {
+    font-size: 40px;
+    color: #172554;
+    margin-bottom: 15px;
+}
+/* Introduction text */
+.course-intro {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+/* Search box container */
+.search-container {
+    margin-bottom: 40px;
+}
+/* Search input */
+#courseSearch {
+    width: 400px;
+    max-width: 90%;
+    padding: 14px 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+/* Search box when clicked */
+#courseSearch:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 5px
+                rgba(37, 99, 235, 0.3);
+}
+/* Course container */
+.course-container {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 30px;
+}
+/* Individual course card */
+.course-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+/* Course card hover effect */
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+/* Course icon */
+.course-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+/* Course title */
+.course-card h2 {
+    color: #172554;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+/* Course description */
+.course-card > p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Course information */
+.course-details {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+/* Course detail paragraph */
+.course-details p {
+    margin: 8px 0;
+    color: #444;
+}
+/* Apply button */
+.course-card .btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Apply button hover */
+.course-card .btn:hover {
+    background: #1d4ed8;
+}
+/* No results message */
+.no-results {
+    display: none;
+    color: #dc2626;
+    font-size: 18px;
+    margin-top: 30px;
+}
+/* Active navigation link */
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+/* Tablet */
+@media (max-width: 1000px) {
+    .course-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+/* Mobile */
+@media (max-width: 650px) {
+    .course-section {
+        padding: 40px 5%;
+    }
+    .course-section h1 {
+        font-size: 30px;
+    }
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+    #courseSearch {
+        width: 100%;
+    }
+}
+/* =========================================
+   ADMISSION PAGE
+========================================= */
+
+
+/* Main admission section */
+
+.admission-section {
+
+    padding: 60px 8%;
+
+    background-color: #f8fafc;
+
+    min-height: 800px;
+
+}
+
+
+/* Admission heading */
+
+.admission-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.admission-heading h1 {
+
+    font-size: 40px;
+
+    color: #172554;
+
+    margin-bottom: 10px;
+
+}
+
+
+.admission-heading p {
+
+    color: #666;
+
+    font-size: 17px;
+
+}
+
+
+
+/* =========================================
+   ADMISSION FORM
+========================================= */
+
+#admissionForm {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+
+
+/* Individual form section */
+
+.form-section {
+
+    background-color: white;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+
+/* Section heading */
+
+.form-section h2 {
+
+    color: #172554;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 2px solid #e5e7eb;
+
+    padding-bottom: 12px;
+
+}
+
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* Labels */
+
+.form-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* Required star */
+
+.form-group label span {
+
+    color: #dc2626;
+
+}
+
+
+
+/* Inputs */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+
+
+/* Input focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 5px
+        rgba(37, 99, 235, 0.2);
+
+}
+
+
+
+/* Textarea */
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+
+/* File input */
+
+.form-group input[type="file"] {
+
+    background-color: #f8fafc;
+
+    padding: 12px;
+
+}
+
+
+
+/* Small help text */
+
+.form-group small {
+
+    display: block;
+
+    color: #64748b;
+
+    margin-top: 6px;
+
+    font-size: 13px;
+
+}
+
+
+
+/* Error message */
+
+.error-message {
+
+    color: #dc2626;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+
+/* Eligibility button */
+
+.secondary-btn {
+
+    background-color: #0f766e;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.secondary-btn:hover {
+
+    background-color: #115e59;
+
+}
+
+
+
+/* Submit button */
+
+.submit-btn {
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 7px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.submit-btn:hover {
+
+    background-color: #1d4ed8;
+
+}
+
+
+
+/* Submit container */
+
+.submit-container {
+
+    text-align: center;
+
+    margin: 30px 0;
+
+}
+
+
+
+/* =========================================
+   ELIGIBILITY RESULT
+========================================= */
+
+.eligibility-result {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    display: none;
+
+}
+
+
+
+/* Eligible */
+
+.eligibility-success {
+
+    display: block;
+
+    background-color: #dcfce7;
+
+    color: #166534;
+
+    border: 1px solid #86efac;
+
+}
+
+
+
+/* Not eligible */
+
+.eligibility-failure {
+
+    display: block;
+
+    background-color: #fee2e2;
+
+    color: #991b1b;
+
+    border: 1px solid #fca5a5;
+
+}
+
+
+
+/* =========================================
+   DECLARATION
+========================================= */
+
+.declaration {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+}
+
+
+.declaration input {
+
+    width: 18px;
+
+    height: 18px;
+
+    margin-top: 3px;
+
+    cursor: pointer;
+
+}
+
+
+.declaration label {
+
+    color: #444;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.success-message {
+
+    display: none;
+
+    background-color: #dcfce7;
+
+    color: #166534;
+
+    border: 1px solid #86efac;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+}
+
+
+.success-message h3 {
+
+    margin-bottom: 10px;
+
+    color: #166534;
+
+}
+
+
+.success-message p {
+
+    margin: 7px 0;
+
+}
+
+
+
+/* =========================================
+   ADMISSION RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 650px) {
+
+    .admission-section {
+
+        padding: 40px 5%;
+
+    }
+
+
+    .admission-heading h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .form-section {
+
+        padding: 20px;
+
+    }
+
+
+    .form-section h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .submit-btn {
+
+        width: 100%;
+
+    }
+
+}
